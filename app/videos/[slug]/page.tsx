@@ -17,8 +17,9 @@ function YouTubeEmbed({ id }: { id: string }) {
   );
 }
 
-export default function VideoDetail({ params }: { params: { slug: string } }) {
-  const video = videos.find((v) => v.slug === params.slug);
+export default async function VideoDetail({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const video = videos.find((v) => v.slug === slug);
   if (!video) return notFound();
 
   return (
