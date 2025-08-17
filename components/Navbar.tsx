@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const NAV_LINKS = [
   { name: "Home", href: "/" },
@@ -14,7 +14,11 @@ const NAV_LINKS = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
+
+  // Prevent hydration mismatch for isActive highlighting
+  useEffect(() => setMounted(true), []);
 
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
@@ -43,18 +47,20 @@ export default function Navbar() {
 
           {/* Desktop nav */}
           <ul className="hidden md:flex items-center gap-1 text-sm">
-            {NAV_LINKS.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className={`rounded-md px-3 py-2 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 hover:text-blue-700 hover:bg-blue-50 ${isActive(link.href) ? "text-blue-700 bg-blue-50" : "text-gray-700"
-                    }`}
-                  aria-current={isActive(link.href) ? "page" : undefined}
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
+            {NAV_LINKS.map((link) => {
+              const active = mounted && isActive(link.href);
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={`rounded-md px-3 py-2 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 hover:text-blue-700 hover:bg-blue-50 ${active ? "text-blue-700 bg-blue-50" : "text-gray-700"}`}
+                    aria-current={active ? "page" : undefined}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
 
           {/* Mobile menu button */}
@@ -76,18 +82,20 @@ export default function Navbar() {
             }`}
         >
           <ul className="pb-4 space-y-1">
-            {NAV_LINKS.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className={`block rounded-md px-3 py-2 transition-colors hover:bg-gray-50 ${isActive(link.href) ? "text-blue-700" : "text-gray-700"
-                    }`}
-                  onClick={() => setOpen(false)}
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
+            {NAV_LINKS.map((link) => {
+              const active = mounted && isActive(link.href);
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={`block rounded-md px-3 py-2 transition-colors hover:bg-gray-50 ${active ? "text-blue-700" : "text-gray-700"}`}
+                    onClick={() => setOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </nav>
