@@ -2,8 +2,9 @@ import products from "@/data/products.json";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 
-export default function ProductDetail({ params }: { params: { slug: string } }) {
-  const product = products.find((p) => p.slug === params.slug);
+export default async function ProductDetail({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const product = products.find((p) => p.slug === slug);
   if (!product) return notFound();
   return (
     <main className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-10">
