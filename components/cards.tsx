@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Product, Guide, Video, Article } from "@/types";
+import { Product, Guide, Video } from "@/types";
 
 export function ProductCard({ product }: { product: Product }) {
   return (

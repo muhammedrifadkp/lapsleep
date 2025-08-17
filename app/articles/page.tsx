@@ -8,7 +8,7 @@ export default function ArticlesPage() {
       <p className="text-gray-600 mt-2">Baby care information and helpful articles.</p>
       <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {articles.map((a) => (
-          <GuideCard key={a.id} guide={a as any} hrefBase="/articles" />
+          <GuideCard key={a.id} guide={a} hrefBase="/articles" />
         ))}
       </div>
     </main>
