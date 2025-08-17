@@ -1,0 +1,20 @@
+[
+  {
+    "id": "v1",
+    "title": "Swaddling 101",
+    "slug": "swaddling-101",
+    "platform": "youtube",
+    "videoId": "dQw4w9WgXcQ",
+    "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    "description": "Learn how to swaddle safely and effectively."
+  },
+  {
+    "id": "v2",
+    "title": "Bedtime Routine Demo",
+    "slug": "bedtime-routine-demo",
+    "platform": "youtube",
+    "videoId": "M7lc1UVf-VE",
+    "thumbnail": "https://i.ytimg.com/vi/M7lc1UVf-VE/maxresdefault.jpg",
+    "description": "A calm, simple routine to wind down."
+  }
+]

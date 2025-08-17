@@ -1,0 +1,49 @@
+[
+  {
+    "id": "p1",
+    "name": "Lapsleep Swaddle Blanket",
+    "slug": "lapsleep-swaddle-blanket",
+    "price": 29.99,
+    "description": "Soft, breathable swaddle designed to soothe newborns and improve sleep.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/2/20/Newborn_Baby_%28Unsplash%29.jpg"
+    ],
+    "tags": [
+      "swaddle",
+      "sleep"
+    ],
+    "category": "Sleep",
+    "rating": 4.7
+  },
+  {
+    "id": "p2",
+    "name": "Gentle Sound Machine",
+    "slug": "gentle-sound-machine",
+    "price": 39.99,
+    "description": "Portable white noise machine with lullabies and timer settings.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/2/2d/LectroFan_white_noise_machine.jpg"
+    ],
+    "tags": [
+      "audio",
+      "sleep"
+    ],
+    "category": "Sleep",
+    "rating": 4.5
+  },
+  {
+    "id": "p3",
+    "name": "Night Light Soother",
+    "slug": "night-light-soother",
+    "price": 19.99,
+    "description": "Warm, dimmable night light perfect for nighttime feedings and diaper changes.",
+    "images": [
+      "https://upload.wikimedia.org/wikipedia/commons/f/ff/White_lamp.JPG"
+    ],
+    "tags": [
+      "lighting"
+    ],
+    "category": "Nursery",
+    "rating": 4.4
+  }
+]
