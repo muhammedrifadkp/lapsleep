@@ -33,7 +33,7 @@ export default function Navbar() {
       >
         Skip to content
       </a>
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Primary">
+      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16" aria-label="Primary">
         <div className="flex h-16 items-center justify-between">
           {/* Brand */}
           <div className="flex items-center gap-3">

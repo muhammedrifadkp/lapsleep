@@ -145,7 +145,13 @@ export default function Home() {
             <p className="text-blue-100">Short, practical advice for calmer nights.</p>
           </div>
           <form className="flex w-full md:w-auto gap-3" onSubmit={(e) => e.preventDefault()}>
-            <input type="email" placeholder="Your email" required className="flex-1 md:w-80 px-4 py-3 rounded-md text-gray-900" aria-label="Email address" />
+            <input
+  type="email"
+  placeholder="Your email"
+  required
+  className="flex-1 md:w-80 px-4 py-3 rounded-md text-gray-900 border border-black"
+  aria-label="Email address"
+/>
             <button className="px-5 py-3 rounded-md bg-white text-blue-700 font-medium hover:bg-blue-50 active:scale-95 transition">Subscribe</button>
           </form>
         </div>
