@@ -1,5 +1,6 @@
 import videos from "@/data/videos.json";
 import { VideoCard } from "@/components/cards";
+import type { Video } from "@/types";
 
 export default function VideosPage() {
   return (
@@ -8,7 +9,7 @@ export default function VideosPage() {
       <p className="text-gray-600 mt-2">Short, helpful videos on baby sleep and routines.</p>
       <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {videos.map((v) => (
-          <VideoCard key={v.id} video={v} />
+          <VideoCard key={v.id} video={v as Video} />
         ))}
       </div>
     </main>
