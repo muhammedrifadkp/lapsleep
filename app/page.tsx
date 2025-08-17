@@ -3,6 +3,7 @@ import products from "@/data/products.json";
 import guides from "@/data/guides.json";
 import videos from "@/data/videos.json";
 import { ProductCard, GuideCard, VideoCard } from "@/components/cards";
+import type { Video } from "@/types";
 import Link from "next/link";
 
 export default function Home() {
@@ -40,7 +41,7 @@ export default function Home() {
         </div>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {videos.slice(0, 3).map((v) => (
-            <VideoCard key={v.id} video={v} />
+            <VideoCard key={v.id} video={v as Video} />
           ))}
         </div>
       </section>
