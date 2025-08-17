@@ -3,6 +3,7 @@ import products from "@/data/products.json";
 import guides from "@/data/guides.json";
 import videos from "@/data/videos.json";
 import { ProductCard, GuideCard, VideoCard } from "@/components/cards";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex items-center justify-between">
           <h2 className="text-xl font-semibold">Featured Products</h2>
-          <a href="/products" className="text-sm text-blue-600 hover:underline">View all</a>
+          <Link href="/products" className="text-sm text-blue-600 hover:underline">View all</Link>
         </div>
         <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {products.slice(0, 4).map((p) => (
@@ -23,7 +24,7 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex items-center justify-between">
           <h2 className="text-xl font-semibold">Sleep Guides</h2>
-          <a href="/guides" className="text-sm text-blue-600 hover:underline">View all</a>
+          <Link href="/guides" className="text-sm text-blue-600 hover:underline">View all</Link>
         </div>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {guides.slice(0, 3).map((g) => (
@@ -35,7 +36,7 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex items-center justify-between">
           <h2 className="text-xl font-semibold">Videos</h2>
-          <a href="/videos" className="text-sm text-blue-600 hover:underline">View all</a>
+          <Link href="/videos" className="text-sm text-blue-600 hover:underline">View all</Link>
         </div>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {videos.slice(0, 3).map((v) => (
