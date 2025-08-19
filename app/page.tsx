@@ -4,7 +4,7 @@ import Image from "next/image";
 import products from "@/data/products";
 import guides, { type GuideCategory } from "@/data/guides";
 import videos, { type VideoItem, type VideoTopic } from "@/data/videos";
-import { ProductCard, GuideCard, VideoCard } from "@/components/cards";
+import { GuideCard } from "@/components/cards";
 import ProductCarousel from "@/components/ProductCarousel";
 import RatingStars from "@/components/RatingStars";
 import ValueProps from "@/components/ValueProps";
@@ -34,8 +34,8 @@ export default function Home() {
 
           <div className={`${mounted ? "opacity-100 scale-100" : "opacity-0 scale-95"} transition-all duration-700 delay-100 relative aspect-square rounded-2xl overflow-hidden shadow-inner`}>
             <Image
-              src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=80"
-              alt="Parent gently soothing a sleeping baby"
+              src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=1600&q=80"
+              alt="Peaceful sleeping baby in cozy nursery"
               fill
               className="object-cover"
               priority
@@ -146,12 +146,12 @@ export default function Home() {
           </div>
           <form className="flex w-full md:w-auto gap-3" onSubmit={(e) => e.preventDefault()}>
             <input
-  type="email"
-  placeholder="Your email"
-  required
-  className="flex-1 md:w-80 px-4 py-3 rounded-md text-gray-900 border border-black"
-  aria-label="Email address"
-/>
+              type="email"
+              placeholder="Your email"
+              required
+              className="flex-1 md:w-80 px-4 py-3 rounded-md text-gray-900 border border-black"
+              aria-label="Email address"
+            />
             <button className="px-5 py-3 rounded-md bg-white text-blue-700 font-medium hover:bg-blue-50 active:scale-95 transition">Subscribe</button>
           </form>
         </div>

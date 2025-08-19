@@ -27,7 +27,7 @@ const guides: (Guide & { categories: GuideCategory[] })[] = [
     content:
       "Consistency is key. Choose 3-4 steps you can repeat nightly. Keep lights low, sounds gentle, and movements slow.",
     coverImage:
-      "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=1600&q=80",
     categories: [
       { kind: "topic", label: "bedtime" },
       { kind: "age", label: "3–6 months" },
@@ -41,10 +41,52 @@ const guides: (Guide & { categories: GuideCategory[] })[] = [
     content:
       "Understand wake windows, follow sleepy cues, and create nap‑friendly spaces to improve daytime rest.",
     coverImage:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1600&q=80",
     categories: [
       { kind: "topic", label: "naps" },
       { kind: "age", label: "6–12 months" },
+    ],
+  },
+  {
+    id: "g4",
+    title: "Sleep Regression Survival Guide",
+    slug: "sleep-regression-guide",
+    excerpt: "Navigate the 4-month, 8-month, and 12-month sleep regressions with confidence.",
+    content:
+      "Sleep regressions are temporary but challenging. Learn what causes them and gentle strategies to help your baby (and you) get through them.",
+    coverImage:
+      "https://images.unsplash.com/photo-1519689373023-dd07c7988603?auto=format&fit=crop&w=1600&q=80",
+    categories: [
+      { kind: "topic", label: "regressions" },
+      { kind: "age", label: "3–6 months" },
+    ],
+  },
+  {
+    id: "g5",
+    title: "Safe Sleep Guidelines for New Parents",
+    slug: "safe-sleep-guidelines",
+    excerpt: "Essential safety tips for creating a secure sleep environment for your baby.",
+    content:
+      "Follow AAP guidelines for safe sleep: back sleeping, firm mattress, empty crib, and proper room temperature for SIDS prevention.",
+    coverImage:
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=1600&q=80",
+    categories: [
+      { kind: "topic", label: "safe sleep" },
+      { kind: "age", label: "0–3 months" },
+    ],
+  },
+  {
+    id: "g6",
+    title: "Transitioning from Bassinet to Crib",
+    slug: "bassinet-to-crib-transition",
+    excerpt: "Make the move from bassinet to crib smooth and stress-free.",
+    content:
+      "When and how to transition your baby to their own room and crib. Tips for maintaining good sleep habits during the change.",
+    coverImage:
+      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=80",
+    categories: [
+      { kind: "topic", label: "bedtime" },
+      { kind: "age", label: "3–6 months" },
     ],
   },
 ];

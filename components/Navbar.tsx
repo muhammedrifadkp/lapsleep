@@ -26,15 +26,15 @@ export default function Navbar() {
   };
 
   return (
-    <header className="backdrop-blur supports-[backdrop-filter]:bg-white/70 bg-white/90 sticky top-0 z-40 border-b border-gray-100">
+    <header className={`backdrop-blur supports-[backdrop-filter]:bg-white/70 bg-white/90 sticky top-0 z-40 border-b border-gray-100 ${open ? "h-screen md:h-auto" : "h-16"}`}>
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded-md focus:bg-blue-600 focus:px-3 focus:py-2 focus:text-white"
       >
         Skip to content
       </a>
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16" aria-label="Primary">
-        <div className="flex h-16 items-center justify-between">
+      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-full flex flex-col" aria-label="Primary">
+        <div className="flex h-16 items-center justify-between flex-shrink-0">
           {/* Brand */}
           <div className="flex items-center gap-3">
             <Link href="/" aria-label="lapsleep home" className="flex items-center gap-2">
@@ -78,17 +78,17 @@ export default function Navbar() {
         {/* Mobile panel */}
         <div
           id="mobile-menu"
-          className={`md:hidden origin-top transition-all duration-200 ease-out ${open ? "opacity-100 scale-y-100" : "pointer-events-none opacity-0 scale-y-95"
+          className={`md:hidden flex-1 flex flex-col justify-center transition-all duration-200 ease-out ${open ? "opacity-100 scale-y-100" : "pointer-events-none opacity-0 scale-y-95"
             }`}
         >
-          <ul className="pb-4 space-y-1">
+          <ul className="space-y-4 text-center">
             {NAV_LINKS.map((link) => {
               const active = mounted && isActive(link.href);
               return (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className={`block rounded-md px-3 py-2 transition-colors hover:bg-gray-50 ${active ? "text-blue-700" : "text-gray-700"}`}
+                    className={`block rounded-md px-4 py-3 text-lg transition-colors hover:bg-gray-50 ${active ? "text-blue-700 bg-blue-50" : "text-gray-700"}`}
                     onClick={() => setOpen(false)}
                   >
                     {link.name}
