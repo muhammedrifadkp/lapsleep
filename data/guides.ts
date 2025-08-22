@@ -13,7 +13,7 @@ const guides: (Guide & { categories: GuideCategory[] })[] = [
     content:
       "Getting your newborn to sleep can be challenging. In this guide, we cover safe sleep positions, room temperature, swaddling techniques, and soothing routines.",
     coverImage:
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=80",
+      "https://i.ytimg.com/vi/vnrLnFbie7M/sddefault.jpg",
     categories: [
       { kind: "age", label: "0–3 months" },
       { kind: "topic", label: "safe sleep" },
@@ -27,7 +27,7 @@ const guides: (Guide & { categories: GuideCategory[] })[] = [
     content:
       "Consistency is key. Choose 3-4 steps you can repeat nightly. Keep lights low, sounds gentle, and movements slow.",
     coverImage:
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=1600&q=80",
+      "https://images.ctfassets.net/2ql69mthp94m/1EWzsCfSnGwfvteIchuoz9/97f000e01b045d86958afedc65d0458a/Establish_a_Bedtime_Routine.jpg",
     categories: [
       { kind: "topic", label: "bedtime" },
       { kind: "age", label: "3–6 months" },
@@ -41,7 +41,7 @@ const guides: (Guide & { categories: GuideCategory[] })[] = [
     content:
       "Understand wake windows, follow sleepy cues, and create nap‑friendly spaces to improve daytime rest.",
     coverImage:
-      "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1600&q=80",
+      "https://babysleepconsultant.co/cdn/shop/articles/routine_post_1080x.png?v=1608668164",
     categories: [
       { kind: "topic", label: "naps" },
       { kind: "age", label: "6–12 months" },
@@ -55,7 +55,7 @@ const guides: (Guide & { categories: GuideCategory[] })[] = [
     content:
       "Sleep regressions are temporary but challenging. Learn what causes them and gentle strategies to help your baby (and you) get through them.",
     coverImage:
-      "https://images.unsplash.com/photo-1519689373023-dd07c7988603?auto=format&fit=crop&w=1600&q=80",
+      "https://nurtureparenting.com.au/cdn/shop/articles/11084f9a0569e08dd4b83bf072fe74e5_1080x.jpg?v=1644490542",
     categories: [
       { kind: "topic", label: "regressions" },
       { kind: "age", label: "3–6 months" },
@@ -69,7 +69,7 @@ const guides: (Guide & { categories: GuideCategory[] })[] = [
     content:
       "Follow AAP guidelines for safe sleep: back sleeping, firm mattress, empty crib, and proper room temperature for SIDS prevention.",
     coverImage:
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=1600&q=80",
+      "https://www.aap.org/globalassets/campaigns--toolkits/safe-sleep/infographic-1.png",
     categories: [
       { kind: "topic", label: "safe sleep" },
       { kind: "age", label: "0–3 months" },
@@ -83,7 +83,7 @@ const guides: (Guide & { categories: GuideCategory[] })[] = [
     content:
       "When and how to transition your baby to their own room and crib. Tips for maintaining good sleep habits during the change.",
     coverImage:
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=80",
+      "https://www.cradlewise.com/blog-static/_next/image?url=https%3A%2F%2Fs3.us-west-1.amazonaws.com%2Fassets.cradlewise.com%2Fwp-content%2Fuploads%2F2023%2F03%2FWhen-and-how-to-go-from-bassinet-to-crib-mode.png&w=1920&q=75",
     categories: [
       { kind: "topic", label: "bedtime" },
       { kind: "age", label: "3–6 months" },

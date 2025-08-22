@@ -31,20 +31,42 @@ export default function VideosPage() {
       </div>
 
       <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filtered.map((v) => (
-          <div key={v.id} className="group">
-            <VideoCard video={v} />
-            <div className="mt-2 flex items-center justify-between text-xs text-gray-500">
-              <span className="inline-flex gap-1">
-                {v.topics?.slice(0, 2).map((t) => (
-                  <span key={t} className="rounded-full bg-gray-100 px-2 py-0.5">{t}</span>
-                ))}
-              </span>
-              {v.duration ? <span>{v.duration}</span> : null}
-            </div>
+  {filtered.map((v) => (
+    <div key={v.id} className="group">
+      <div className="relative">
+        {/* Video Card */}
+        <VideoCard video={v} />
+
+        {/* Play Button Overlay */}
+        <div
+          className="absolute inset-0 grid place-items-center"
+          aria-hidden
+        >
+          <div className="relative -top-8 cursor-pointer rounded-full bg-white/90 p-3 shadow-md group-hover:scale-105 transition">
+            <svg
+              viewBox="0 0 24 24"
+              className="h-6 w-6 text-blue-600"
+              fill="currentColor"
+            >
+              <path d="M8 5v14l11-7z" />
+            </svg>
           </div>
-        ))}
+        </div>
       </div>
+
+      {/* Video Info */}
+      <div className="mt-2 flex items-center justify-between text-xs text-gray-500">
+        <span className="inline-flex gap-1">
+          {v.topics?.slice(0, 2).map((t) => (
+            <span key={t} className="rounded-full bg-gray-100 px-2 py-0.5">{t}</span>
+          ))}
+        </span>
+        {v.duration ? <span>{v.duration}</span> : null}
+      </div>
+    </div>
+  ))}
+</div>
+
     </main>
   );
 }

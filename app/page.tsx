@@ -34,7 +34,7 @@ export default function Home() {
 
           <div className={`${mounted ? "opacity-100 scale-100" : "opacity-0 scale-95"} transition-all duration-700 delay-100 relative aspect-square rounded-2xl overflow-hidden shadow-inner`}>
             <Image
-              src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=1600&q=80"
+              src="/images/hero-page-bg-img.jpg"
               alt="Peaceful sleeping baby in cozy nursery"
               fill
               className="object-cover"
@@ -89,32 +89,58 @@ export default function Home() {
           <Link href="/videos" className="text-sm text-blue-600 hover:underline">View all videos</Link>
         </div>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {videos.slice(0, 3).map((v: VideoItem) => (
-            <article key={v.id} className="group">
-              <div className="relative aspect-video overflow-hidden rounded-xl bg-gray-100">
-                <Image src={v.thumbnail || "/placeholder.svg"} alt={v.title} fill className="object-cover" />
-                <div className="absolute inset-0 grid place-items-center">
-                  <div className="rounded-full bg-white/90 p-3 shadow-md group-hover:scale-105 transition" aria-hidden>
-                    <svg viewBox="0 0 24 24" className="h-6 w-6 text-blue-600" fill="currentColor">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-3">
-                <h3 className="font-medium text-gray-900">{v.title}</h3>
-                <div className="mt-1 flex items-center justify-between text-xs text-gray-500">
-                  <span className="inline-flex flex-wrap gap-1">
-                    {v.topics?.slice(0, 2).map((t: VideoTopic) => (
-                      <span key={t} className="rounded-full bg-gray-100 px-2 py-0.5">{t}</span>
-                    ))}
-                  </span>
-                  {v.duration ? <span>{v.duration}</span> : null}
-                </div>
-              </div>
-            </article>
-          ))}
+  {videos.slice(0, 3).map((v: VideoItem, i) => {
+    const thumbnails = [
+      "https://sundayhug.com/cdn/shop/articles/swaddling-a-baby-101-what-you-need-to-know-506791.jpg?v=1679666560",
+      "https://www.sleepfoundation.org/wp-content/uploads/2020/09/Children-and-Sleep-1024x614.png",
+      "https://sleeplady.com/wp-content/uploads/2016/03/4-Steps-To-Setting-Up-a-Sleep-Friendly-Environment.jpg",
+    ];
+
+    return (
+      <article key={v.id} className="group">
+        <div className="relative aspect-video overflow-hidden rounded-xl bg-gray-100">
+          <Image
+            src={thumbnails[i]}
+            alt={`Thumbnail for ${v.title}`}
+            fill
+            className="object-cover rounded-lg"
+          />
+          <div className="absolute inset-0 grid place-items-center">
+            <div
+              className="rounded-full bg-white/90 p-3 shadow-md group-hover:scale-105 transition cursor-pointer"
+              aria-hidden
+            >
+              <svg
+                viewBox="0 0 24 24"
+                className="h-6 w-6 text-blue-600"
+                fill="currentColor"
+              >
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
         </div>
+        <div className="mt-3">
+          <h3 className="font-medium text-gray-900">{v.title}</h3>
+          <div className="mt-1 flex items-center justify-between text-xs text-gray-500">
+            <span className="inline-flex flex-wrap gap-1">
+              {v.topics?.slice(0, 2).map((t: VideoTopic) => (
+                <span
+                  key={t}
+                  className="rounded-full bg-gray-100 px-2 py-0.5"
+                >
+                  {t}
+                </span>
+              ))}
+            </span>
+            {v.duration ? <span>{v.duration}</span> : null}
+          </div>
+        </div>
+      </article>
+    );
+  })}
+</div>
+
       </section>
 
       {/* Social Proof */}
@@ -144,16 +170,20 @@ export default function Home() {
             <h3 className="text-2xl font-semibold">Get gentle sleep tips in your inbox</h3>
             <p className="text-blue-100">Short, practical advice for calmer nights.</p>
           </div>
-          <form className="flex w-full md:w-auto gap-3" onSubmit={(e) => e.preventDefault()}>
-            <input
-              type="email"
-              placeholder="Your email"
-              required
-              className="flex-1 md:w-80 px-4 py-3 rounded-md text-gray-900 border border-black"
-              aria-label="Email address"
-            />
-            <button className="px-5 py-3 rounded-md bg-white text-blue-700 font-medium hover:bg-blue-50 active:scale-95 transition">Subscribe</button>
-          </form>
+          {mounted && (
+            <form className="flex w-full md:w-auto gap-3" onSubmit={(e) => e.preventDefault()}>
+              <input
+                type="email"
+                placeholder="Your email"
+                required
+                className="flex-1 md:w-80 px-4 py-3 rounded-md text-gray-900"
+                aria-label="Email address"
+              />
+              <button className="px-5 py-3 rounded-md bg-white text-blue-700 font-medium hover:bg-blue-50 active:scale-95 transition">
+                Subscribe
+              </button>
+            </form>
+          )}
         </div>
       </section>
 
