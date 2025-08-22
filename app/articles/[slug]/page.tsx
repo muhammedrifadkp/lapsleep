@@ -1,5 +1,6 @@
 import articles from "@/data/articles.json";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 
 export default async function ArticleDetail({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -10,7 +11,7 @@ export default async function ArticleDetail({ params }: { params: Promise<{ slug
       <h1>{article.title}</h1>
       <p className="text-base text-slate-600">{article.excerpt}</p>
       {article.coverImage ? (
-        <img src={article.coverImage} alt="cover" className="rounded-xl" />
+        <Image src={article.coverImage} alt="cover" className="rounded-xl" />
       ) : null}
       <p>{article.content}</p>
     </main>

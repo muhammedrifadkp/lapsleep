@@ -43,7 +43,7 @@ export default function AboutPage() {
           {/* Our Approach Section */}
           <div className="px-6 py-8 md:p-12 bg-blue-50">
             <h2 className="text-3xl font-bold text-slate-800 mb-6">Our Approach</h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
@@ -52,9 +52,12 @@ export default function AboutPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-slate-800 mb-2">Gentle and Responsive</h3>
-                <p className="text-slate-600">We favor practices that respect your baby's cues and emotional needs, promoting secure attachment.</p>
+                <p className="text-slate-600">
+                  We favor practices that respect your baby&apos;s cues and emotional needs, promoting secure attachment.
+                </p>
+
               </div>
-              
+
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -64,7 +67,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-semibold text-slate-800 mb-2">Simple and Practical</h3>
                 <p className="text-slate-600">Actionable advice and short guides you can apply tonight, without overwhelming theory or complexity.</p>
               </div>
-              
+
               <div className="bg-white p-6 rounded-lg shadow-sm">
                 <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -80,19 +83,19 @@ export default function AboutPage() {
           {/* Why Trust Us Section */}
           <div className="px-6 py-8 md:p-12">
             <h2 className="text-3xl font-bold text-slate-800 mb-6">Why Trust Us</h2>
-            
+
             <div className="prose prose-lg max-w-none text-slate-700">
               <p>
                 Our content is carefully reviewed by certified sleep consultants and pediatric experts
                 for clarity, accuracy, and safety. We test products extensively for usability, durability,
                 and value, ensuring we recommend only what truly works for real families.
               </p>
-              
+
               <p>
                 We organize advice by age and common sleep challenges, making it easy to find exactly
                 what you need for your specific situation. Our team includes:
               </p>
-              
+
               <ul className="list-disc pl-5 mt-4 space-y-2">
                 <li>Certified pediatric sleep consultants</li>
                 <li>Child development specialists</li>
@@ -105,42 +108,42 @@ export default function AboutPage() {
           {/* Our Story Section */}
           <div className="px-6 py-8 md:p-12 bg-slate-100">
             <h2 className="text-3xl font-bold text-slate-800 mb-6">Our Story</h2>
-            
+
             <div className="flex flex-col md:flex-row gap-8">
               <div className="md:w-2/3">
                 <p className="text-slate-700 mb-4">
-                  Lapsleep was founded in 2018 by a group of parents who struggled with their own children's
+                  Lapsleep was founded in 2018 by a group of parents who struggled with their own children&apos;s
                   sleep patterns. Frustrated by the conflicting advice and extreme approaches in many sleep resources,
                   we sought to create a balanced, evidence-based alternative.
                 </p>
-                
+
                 <p className="text-slate-700 mb-4">
                   What began as a small blog sharing our personal experiences has grown into a comprehensive
-                  resource used by thousands of families worldwide. We've maintained our core mission: to provide
-                  compassionate, practical guidance that respects both babies' needs and parents' wellbeing.
+                  resource used by thousands of families worldwide. We&apos;ve maintained our core mission: to provide
+                  compassionate, practical guidance that respects both babies&apos; needs and parents&apos; wellbeing.
                 </p>
-                
+
                 <p className="text-slate-700">
-                  Today, we're proud to have helped over 15,000 families improve their sleep situations while
+                  Today, we&apos;re proud to have helped over 15,000 families improve their sleep situations while
                   maintaining strong, loving connections with their children.
                 </p>
               </div>
-              
+
               <div className="md:w-1/3">
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <h3 className="text-xl font-semibold text-slate-800 mb-4">By the Numbers</h3>
-                  
+
                   <div className="space-y-4">
                     <div>
                       <p className="text-3xl font-bold text-blue-600">15,000+</p>
                       <p className="text-slate-600">Families helped</p>
                     </div>
-                    
+
                     <div>
                       <p className="text-3xl font-bold text-blue-600">98%</p>
                       <p className="text-slate-600">Of parents report improved sleep</p>
                     </div>
-                    
+
                     <div>
                       <p className="text-3xl font-bold text-blue-600">12</p>
                       <p className="text-slate-600">Certified experts on our team</p>
@@ -154,7 +157,7 @@ export default function AboutPage() {
           {/* Commitment Section */}
           <div className="px-6 py-8 md:p-12">
             <h2 className="text-3xl font-bold text-slate-800 mb-6">Our Commitment to You</h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex items-start">
                 <div className="flex-shrink-0">
@@ -171,7 +174,7 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="flex-shrink-0">
                   <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
@@ -187,7 +190,7 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="flex-shrink-0">
                   <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
@@ -203,7 +206,7 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="flex-shrink-0">
                   <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
@@ -215,7 +218,7 @@ export default function AboutPage() {
                 <div className="ml-4">
                   <h4 className="text-lg font-medium text-slate-800">Respect for All Choices</h4>
                   <p className="mt-2 text-slate-600">
-                    We provide options, not prescriptions, recognizing that each family's situation is unique.
+                    We provide options, not prescriptions, recognizing that each family&apos;s situation is unique.
                   </p>
                 </div>
               </div>
